@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+* {
+  @apply font-poppins;
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1144px] px-5 mx-auto;
+  }
+  .container-sm {
+    @apply max-w-[820px] mx-auto;
+  }
+  .__body_text {
+    @apply text-base text-white opacity-80;
+  }
+}
+
+.tvl_charts .recharts-tooltip-wrapper {
+  @apply hidden;
+}
+
+.tvl_charts .recharts-curve.recharts-tooltip-cursor {
+  @apply stroke-primary;
+}
+html.dark .tvl_charts .recharts-curve.recharts-tooltip-cursor {
+  stroke: rgb(255, 255, 255, 0.1) !important;
+}
+
+.tvl_charts .recharts-layer.recharts-active-dot circle {
+  @apply fill-[#9C5DDC] stroke-white;
+}
+
+.scrollbar_none::-webkit-scrollbar {
+  display: none;
+}
+
+.strokes_bg {
+  background-image: url("/img/steokes.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.all_farms_table tbody tr:nth-child(odd) {
+  background: #5a5c63;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
